@@ -10,21 +10,21 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const products = [
-  { id: 1, title: "Product 1", images: ["/Images/Rectangle 61.png", "/Images/Rectangle 61.png", "/Images/Rectangle 61.png"] },
-  { id: 2, title: "Product 2", images: ["/Images/Rectangle 62.png", "/Images/Rectangle 62.png", "/Images/Rectangle 62.png"] },
-  { id: 3, title: "Product 3", images: ["/Images/Rectangle 63.png", "/Images/Rectangle 63.png", "/Images/Rectangle 63.png"] },
-  { id: 4, title: "Product 4", images: ["/Images/Rectangle 64.png", "/Images/Rectangle 64.png", "/Images/Rectangle 64.png"] },
-  { id: 5, title: "Product 5", images: ["/Images/Rectangle 60.png", "/Images/Rectangle 60.png", "/Images/Rectangle 60.png"] },
-  { id: 6, title: "Product 6", images: ["/Images/Rectangle 15.png", "/Images/Rectangle 15.png", "/Images/Rectangle 15.png"] },
-  { id: 7, title: "Product 7", images: ["/Images/Rectangle 16.png", "/Images/Rectangle 16.png", "/Images/Rectangle 16.png"] },
-  { id: 8, title: "Product 8", images: ["/Images/Rectangle 17.png", "/Images/Rectangle 17.png", "/Images/Rectangle 17.png"] },
+  { id: 1, title: "Product 1", Images: ["/Images/Rectangle 61.png", "/Images/Rectangle 61.png", "/Images/Rectangle 61.png"] },
+  { id: 2, title: "Product 2", Images: ["/Images/Rectangle 62.png", "/Images/Rectangle 62.png", "/Images/Rectangle 62.png"] },
+  { id: 3, title: "Product 3", Images: ["/Images/Rectangle 63.png", "/Images/Rectangle 63.png", "/Images/Rectangle 63.png"] },
+  { id: 4, title: "Product 4", Images: ["/Images/Rectangle 64.png", "/Images/Rectangle 64.png", "/Images/Rectangle 64.png"] },
+  { id: 5, title: "Product 5", Images: ["/Images/Rectangle 60.png", "/Images/Rectangle 60.png", "/Images/Rectangle 60.png"] },
+  { id: 6, title: "Product 6", Images: ["/Images/Rectangle 15.png", "/Images/Rectangle 15.png", "/Images/Rectangle 15.png"] },
+  { id: 7, title: "Product 7", Images: ["/Images/Rectangle 16.png", "/Images/Rectangle 16.png", "/Images/Rectangle 16.png"] },
+  { id: 8, title: "Product 8", Images: ["/Images/Rectangle 17.png", "/Images/Rectangle 17.png", "/Images/Rectangle 17.png"] },
 ];
 
 const projects = [
-  { id: 1, title: "Project One", images: ["/Images/Rectangle 141.PNG", "/Images/Rectangle 141.PNG", "/Images/Rectangle 141.PNG"] },
-  { id: 2, title: "Project Two", images: ["/Images/Rectangle 15 (1).PNG", "/Images/Rectangle 15 (1).PNG", "/Images/Rectangle 15 (1).PNG"] },
-  { id: 3, title: "Project Three", images: ["/Images/Rectangle 16 (1).PNG", "/Images/Rectangle 16 (1).PNG", "/Images/Rectangle 16 (1).PNG"] },
-  { id: 4, title: "Project Four", images: ["/Images/Rectangle 17 (1).PNG", "/Images/Rectangle 17 (1).PNG", "/Images/Rectangle 17 (1).PNG"] },
+  { id: 1, title: "Project One", Images: ["/Images/Rectangle 141.png", "/Images/Rectangle 141.png", "/Images/Rectangle 141.png"] },
+  { id: 2, title: "Project Two", Images: ["/Images/Rectangle 15 (1).png", "/Images/Rectangle 15 (1).png", "/Images/Rectangle 15 (1).png"] },
+  { id: 3, title: "Project Three", Images: ["/Images/Rectangle 16 (1).png", "/Images/Rectangle 16 (1).png", "/Images/Rectangle 16 (1).png"] },
+  { id: 4, title: "Project Four", Images: ["/Images/Rectangle 17 (1).png", "/Images/Rectangle 17 (1).png", "/Images/Rectangle 17 (1).png"] },
 ];
 
 export default function StorePage() {
@@ -106,7 +106,7 @@ export default function StorePage() {
           {/* Image */}
           <div className="order-2 md:order-1 w-full h-[300px] md:h-[520px] relative overflow-hidden rounded shadow translate-y-20">
             <Image
-              src="/Images/Rectangle 149.PNG"
+              src="/Images/Rectangle 149.png"
               alt="Casa Progetto Showroom"
               fill
               className="object-cover"
@@ -136,7 +136,7 @@ export default function StorePage() {
               <div key={product.id} className="flex flex-col items-center">
                 <div className="w-full aspect-[3/4] overflow-hidden rounded shadow">
                   <Slider {...sliderSettings}>
-                    {product.images.map((img, idx) => (
+                    {product.Images.map((img, idx) => (
                       <div key={idx} className="relative w-full h-full">
                         <Image
                           src={img}
@@ -188,7 +188,7 @@ export default function StorePage() {
                 {/* Image slider */}
                 <div className="w-full shadow-md overflow-hidden">
                   <Slider {...sliderSettings}>
-                    {project.images.map((img, i) => (
+                    {project.Images.map((img, i) => (
                       <div key={i} className="relative w-full h-[350px]">
                         <Image
                           src={img}
