@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   // Handles form submission for both mobile and desktop
@@ -107,15 +108,17 @@ export default function Footer() {
 
               {/* Location Info */}
               <div className="flex flex-col space-y-4 mt-8 w-full max-w-[450px] text-center lg:text-left items-center lg:items-start">
-                <a href="/#hmpg">
-                  <Image
-                    src="/Images/Logo 1.png"
-                    alt="Casa Progetto"
-                    width={150}
-                    height={50}
-                    className="mb-6"
-                  />
-                </a>
+  <Link href="/#hmpg">
+    <Image
+      src="/Images/Logo.png"
+      alt="Casa Progetto Logo"
+      width={150}
+      height={50}
+      className="mb-6"
+    />
+  </Link>
+
+
 
                 <h3 className="text-casa-green text-lg font-playfair">Location</h3>
                 <p className="text-white/80 text-sm font-inter leading-tight">
@@ -189,34 +192,34 @@ export default function Footer() {
             <div className="p-2 rounded-lg mt-6" style={{ backgroundColor: "#2B2B2B" }}>
               <ul className="flex flex-wrap justify-center text-sm items-center gap-x-4">
                 <li>
-                  <a href="#about" className="text-white/80 hover:text-casa-green font-inter">
+                  <Link href="#about" className="text-white/80 hover:text-casa-green font-inter">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-white/40">|</li>
                 <li>
-                  <a href="#faq" className="text-white/80 hover:text-casa-green font-inter">
+                  <Link href="#faq" className="text-white/80 hover:text-casa-green font-inter">
                     FAQ&apos;s
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-white/40">|</li>
                 <li>
-                  <a href="#" className="text-white/80 hover:text-casa-green font-inter">
+                  <Link href="#" className="text-white/80 hover:text-casa-green font-inter">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-white/40">|</li>
                 <li>
-                  <a href="#" className="text-white/80 hover:text-casa-green font-inter">
+                  <Link href="#" className="text-white/80 hover:text-casa-green font-inter">
                     Store
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             {/* Social Media */}
             <div className="flex gap-4 mt-6">
-              <a
+              <Link
                 href="#"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
@@ -228,8 +231,8 @@ export default function Footer() {
                   height={32}
                   className="w-8 h-8 object-contain"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
@@ -241,8 +244,8 @@ export default function Footer() {
                   height={32}
                   className="w-8 h-8 object-contain"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
@@ -254,7 +257,7 @@ export default function Footer() {
                   height={32}
                   className="w-8 h-8 object-contain"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

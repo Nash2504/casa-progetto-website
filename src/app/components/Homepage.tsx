@@ -1,9 +1,10 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from "next/link";
+
 import Footer from "../components/Footer"; // adjust the path if your Footer file is elsewhere
 import Header from "../components/Header";
+
 
 const Homepage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -444,7 +445,7 @@ const Homepage = () => {
             {/* Centered Text Content in Square Box */}
             <div className="w-[300px] h-[300px] bg-white/10 p-4 text-center rounded flex flex-col items-center justify-center">
               <h3 className="text-casa-green text-base mb-2 font-inter">Testimonial</h3>
-              <h1 className="text-2xl text-white font-playfair mb-3">Our Client Say's</h1>
+              <h1 className="text-2xl text-white font-playfair mb-3">Our Client Say&apos;s</h1>
               <div className="text-casa-green text-2xl mb-2 font-serif">“</div>
               <blockquote className="text-sm text-white italic mb-3">
                 Top-quality service, professional team, and excellent craftsmanship!
@@ -468,7 +469,7 @@ const Homepage = () => {
             <div className="flex-1 max-w-md mt-24 ml-24">
               <div className="text-left mb-8">
                 <h3 className="text-casa-green text-lg mb-2 font-inter">Testimonial</h3>
-                <h1 className="text-4xl lg:text-5xl text-white font-playfair">Our Client Say's</h1>
+                <h1 className="text-4xl lg:text-5xl text-white font-playfair">Our Client Say&apos;s</h1>
               </div>
 
               {/* Testimonial Box */}
@@ -512,7 +513,7 @@ const Homepage = () => {
       <section id="faq" className="bg-white py-32 px-4">
   <div className="mx-auto w-full max-w-4xl">
     <h6 className="text-casa-green text-xs mb-2 font-inter text-center lg:text-left lg:ml-[330px]">
-      FAQ's
+      FAQ&apos;s
     </h6>
     <h1 className="text-3xl sm:text-4xl text-center mb-10 text-gray-800 font-playfair">
       Any Question?

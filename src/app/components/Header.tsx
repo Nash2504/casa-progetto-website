@@ -13,7 +13,7 @@ export default function Header() {
       <nav className="flex justify-between items-center max-w-7xl mx-auto w-full">
         {/* Logo */}
         <div className="logo">
-          <a href="/#hmpg">
+          <Link href="/#hmpg">
             <Image
               src="/Images/Logo 1.png"
               alt="Casa Progetto Logo"
@@ -21,19 +21,38 @@ export default function Header() {
               height={50}
               className="h-12 w-auto"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex list-none gap-20 font-inter text-sm">
-          <li><a href="/#about" className="text-white/90 hover:text-casa-green transition-colors">About Us</a></li>
-          <li><Link href="/services" className="text-white/90 hover:text-casa-green transition-colors">Services</Link></li>
-          <li><a href="/store" className="text-white/90 hover:text-casa-green transition-colors">Store &gt;</a></li>
-          <li><a href="/#why-us" className="text-white/90 hover:text-casa-green transition-colors">Why Us?</a></li>
           <li>
-            <a href="#contact" className="border-2 border-casa-green text-casa-green px-4 py-2 rounded text-sm hover:bg-casa-green hover:text-gray-900 transition-all">
+            <Link href="/#about" className="text-white/90 hover:text-casa-green transition-colors">
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link href="/services" className="text-white/90 hover:text-casa-green transition-colors">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link href="/store" className="text-white/90 hover:text-casa-green transition-colors">
+              Store &gt;
+            </Link>
+          </li>
+          <li>
+            <Link href="/#why-us" className="text-white/90 hover:text-casa-green transition-colors">
+              Why Us?
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#contact"
+              className="border-2 border-casa-green text-casa-green px-4 py-2 rounded text-sm hover:bg-casa-green hover:text-gray-900 transition-all"
+            >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -53,8 +72,16 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden mt-4 pb-4">
           <ul className="flex flex-col gap-4 font-inter text-sm">
-            <li><a href="/#about" className="block text-white/90">About Us</a></li>
-            <li><Link href="/services" className="block text-white/90">Services</Link></li>
+            <li>
+              <Link href="/#about" className="block text-white/90">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="block text-white/90">
+                Services
+              </Link>
+            </li>
 
             {/* Store with dropdown */}
             <li>
@@ -63,22 +90,40 @@ export default function Header() {
                 className="w-full text-left text-white/90 flex justify-between items-center"
               >
                 Store &gt;
-                
               </button>
               {isStoreOpen && (
                 <ul className="mt-2 ml-4 flex flex-col gap-2 text-white/70">
-                  <li><a href="/store/#store" className="block">Store</a></li>
-                  <li><a href="/store/#product" className="block">Products</a></li>
-                  <li><a href="/store/#project" className="block">Projects Showcase</a></li>
+                  <li>
+                    <Link href="/store/#store" className="block">
+                      Store
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/store/#product" className="block">
+                      Products
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/store/#project" className="block">
+                      Projects Showcase
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
 
-            <li><a href="/#why-us" className="block text-white/90">Why Us?</a></li>
             <li>
-              <a href="#contact" className="block text-casa-green border border-casa-green px-4 py-2 rounded text-center">
+              <Link href="/#why-us" className="block text-white/90">
+                Why Us?
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#contact"
+                className="block text-casa-green border border-casa-green px-4 py-2 rounded text-center"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
