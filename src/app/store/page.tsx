@@ -40,28 +40,25 @@ export default function StorePage() {
   }, []);
 
   const sliderSettings = {
-    dots: true,
+    dots: false, // Removed dots
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true, // Keep arrows only
   };
 
-  // ✅ Desktop → all always
-  // ✅ Mobile → 3 by default unless toggled
-  const visibleProjects =
-    isMobile && !showAllProjectsMobile ? projects.slice(0, 3) : projects;
-  const visibleProducts =
-    isMobile && !showAllProductsMobile ? products.slice(0, 3) : products;
+  const visibleProjects = isMobile && !showAllProjectsMobile ? projects.slice(0, 3) : projects;
+  const visibleProducts = isMobile && !showAllProductsMobile ? products.slice(0, 3) : products;
 
   return (
-    <div className="flex flex-col min-h-screen font-inter">
+    <div className="flex flex-col min-h-screen font-inter overflow-x-hidden">
       <Header />
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[360px] flex items-center justify-center" id="store"
+        className="relative w-full h-[360px] flex items-center justify-center"
+        id="store"
         style={{
           backgroundImage: "url('/Images/Rectangle 047.png')",
           backgroundSize: "cover",
@@ -98,7 +95,7 @@ export default function StorePage() {
               Come explore <br />
               <span className="text-casa-green">Casa Progetto</span>
             </h2>
-            <p className="mt-3 text-gray-600 text-lg font-light">
+            <p className="mt-3 text-gray-600 text-[11px] md:text-lg font-light">
               where every detail is crafted to perfection!
             </p>
           </div>
@@ -115,22 +112,20 @@ export default function StorePage() {
         </div>
 
         {/* Yellow Accent Bars */}
-        {/* Desktop */}
         <div
-  className="absolute top-[400px] right-0 lg:block hidden z-10 w-16 h-44"
-  style={{ transform: "translateX(50%)", backgroundColor: "#FBAE32" }}
-/>
-        {/* Mobile */}
-        <div className="absolute top-0 left-[-20px] right-[-20px] flex justify-between items-start md:hidden px-4 translate-y-[100px]">
+          className="absolute top-[400px] right-0 lg:block hidden z-10 w-16 h-44"
+          style={{ transform: "translateX(50%)", backgroundColor: "#FBAE32" }}
+        />
+        <div className="absolute top-0 left-[-17px] right-[-17px] flex justify-between items-start md:hidden px-4 translate-y-[100px]">
           <div className="w-6 h-24" style={{ background: "#FBAE32" }} />
           <div className="w-6 h-24" style={{ background: "#FBAE32" }} />
         </div>
       </section>
 
       {/* Products Section */}
-      <main className="flex-grow bg-gray-50 py-40 px-6" >
+      <main className="flex-grow bg-gray-50 py-40 px-6">
         <div className="max-w-7xl mx-auto text-center" id="product">
-          <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-12" >
+          <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-12">
             Products
           </h2>
 
@@ -157,7 +152,6 @@ export default function StorePage() {
             ))}
           </div>
 
-          {/* ✅ Toggle Button (only mobile) */}
           <div className="mt-12 md:hidden">
             <button
               onClick={() => setShowAllProductsMobile(!showAllProductsMobile)}
@@ -170,11 +164,7 @@ export default function StorePage() {
       </main>
 
       {/* Project Showcase Section */}
-      <section
-        className="bg-white py-40 px-6 md:px-12"
-        id="project"
-        style={{ background: "#F4F4F4" }}
-      >
+      <section className="bg-white py-40 px-6 md:px-12" id="project" style={{ background: "#F4F4F4" }}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-3xl md:text-4xl font-playfair font-bold mb-12">
             Project Showcase
@@ -188,7 +178,6 @@ export default function StorePage() {
                   idx % 2 === 0 ? "lg:-translate-y-6" : "lg:translate-y-6"
                 }`}
               >
-                {/* Image slider */}
                 <div className="w-full shadow-md overflow-hidden">
                   <Slider {...sliderSettings}>
                     {project.Images.map((img, i) => (
@@ -203,14 +192,11 @@ export default function StorePage() {
                     ))}
                   </Slider>
                 </div>
-
-                {/* Title */}
                 <p className="mt-4 text-lg font-medium">{project.title}</p>
               </div>
             ))}
           </div>
 
-          {/* ✅ Toggle Button (only mobile) */}
           <div className="mt-12 text-center md:hidden">
             <button
               onClick={() => setShowAllProjectsMobile(!showAllProjectsMobile)}

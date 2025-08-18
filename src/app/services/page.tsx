@@ -71,9 +71,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Our Services Section */}
-      <main className="flex-grow bg-gray-100 px-2 py-8" style={{ background: "#F4F4F4" }}>
+      <main className="flex-grow bg-gray-100 px-2 py-8 " style={{ background: "#F4F4F4" }}>
         {/* Container to center and lock layout width so cards don't shift on zoom */}
-        <div className="mx-auto w-full max-w-[1100px] px-10">
+        <div className="mx-auto w-full max-w-[1100px] px-10 ">
           {/* Grid: 1 column on mobile, 2 on md+. Center items.
               Remove negative margins so card positions are stable.
               Use fixed column widths and gaps to avoid reflow on zoom. */}
@@ -82,7 +82,7 @@ export default function ServicesPage() {
               grid
               grid-cols-1 md:grid-cols-2
               gap-y-6 md:gap-y-8 md:gap-x-0
-              justify-items-center
+              justify-items-center 
             "
             style={{
               // Prevent layout jitter on zoom by reserving space
@@ -92,16 +92,18 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className="bg-white shadow-lg flex flex-col w-full max-w-[520px] md:max-w-[480px]"
+                className="bg-white shadow-lg flex flex-col w-full max-w-[520px] md:max-w-[480px]  rounded-xl "
               >
                 {/* Image (kept fixed) */}
                 <div style={{ height: "205px", width: "100%", position: "relative" }}>
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="relative w-full h-[205px]   rounded-t-xl  overflow-hidden">
+  <Image
+    src={service.image}
+    alt={service.title}
+    fill
+    style={{ objectFit: "cover" }}
+  />
+</div>
                 </div>
 
                 {/* Content (increase height for 4 specific cards) */}

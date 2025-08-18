@@ -221,6 +221,8 @@ export default function Footer() {
             <div className="flex gap-4 mt-6">
               <Link
                 href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
               >
@@ -234,6 +236,8 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
               >
@@ -247,6 +251,8 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
               >
