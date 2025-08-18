@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 import Footer from "../components/Footer"; // adjust the path if your Footer file is elsewhere
 import Header from "../components/Header";
 
@@ -43,9 +43,11 @@ const Homepage = () => {
               <p className="text-white/80 font-inter mb-[4vh]" style={{ maxWidth: '38ch', fontSize: 'clamp(12px, 2.2cqw, 16px)' }}>
                 Transforming Spaces with Excellence &amp; Precision
               </p>
+              <Link href="/store">
               <button className="bg-black text-white hover:bg-white hover:text-black transition-all" style={{ padding: '12px 24px', fontSize: 'clamp(14px, 2.2cqw, 16px)' }}>
                 Visit Store
               </button>
+              </Link>
             </div>
 
             <div className="flex-1 z-10 hidden lg:flex justify-center">
@@ -77,9 +79,11 @@ const Homepage = () => {
             <p className="mt-[20px] text-white/80 max-w-[90vw] lg:max-w-[25vw] font-inter mb-[4vh] text-[2vw] lg:text-[0.65rem]" style={{ fontSize: 'clamp(0.65rem, 2vw, 0.9rem)' }}>
               Transforming Spaces with Excellence &amp; Precision
             </p>
+            <Link href="/store">
             <button className="bg-black text-white px-[8vw] py-[18px] hover:bg-white hover:text-black transition-all" style={{ fontSize: 'clamp(1rem, 2vw, 1rem)' }}>
               Visit Store
             </button>
+            </Link>
           </div>
 
           <div className="flex-1 mt-6 z-10 flex justify-center lg:hidden">
@@ -163,7 +167,7 @@ const Homepage = () => {
     ensures impeccable results tailored to your vision.
   </p>
 
-  {/* Mobile-only: two images side by side, centered, below the text */}
+  {/* Mobile-only: two Images side by side, centered, below the text */}
   <div className="mt-8 flex lg:hidden justify-center">
     <div className="grid grid-cols-2 gap-4 place-items-center">
       <Image
@@ -399,9 +403,11 @@ const Homepage = () => {
             <h1 className="text-xl font-semibold text-gray-800 mb-1 font-playfair">Welcome to</h1>
             <h1 className="text-xl font-bold text-casa-green mb-1 font-playfair">Casa Progetto</h1>
             <p className="text-sm text-gray-700 mb-4 font-inter">Where Elegance Meets Functionality</p>
+            <Link href="/store">
             <button className="bg-casa-green text-white px-4 py-2 text-sm rounded hover:bg-green-700 transition-colors">
               Visit Store
             </button>
+            </Link>
           </div>
         </div>
 
@@ -430,9 +436,11 @@ const Homepage = () => {
             <h1 className="text-5xl mb-6 text-gray-800 leading-[0.5] font-playfair">Welcome to</h1>
             <h1 className="text-5xl mb-6 text-casa-green leading-[0.5] font-playfair">Casa Progetto</h1>
             <p className="text-gray-600 leading-[0] mb-6 font-inter">Where Elegance Meets Functionality</p>
+            <Link href="/store">
             <button className="bg-casa-green text-white px-1 py-3 w-36 hover:bg-green-700 transition-colors">
               Visit Store
             </button>
+            </Link>
           </div>
         </div>
       </section>

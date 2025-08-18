@@ -204,13 +204,13 @@ export default function Footer() {
                 </li>
                 <li className="text-white/40">|</li>
                 <li>
-                  <Link href="#" className="text-white/80 hover:text-casa-green font-inter">
+                  <Link href="/services" className="text-white/80 hover:text-casa-green font-inter">
                     Services
                   </Link>
                 </li>
                 <li className="text-white/40">|</li>
                 <li>
-                  <Link href="#" className="text-white/80 hover:text-casa-green font-inter">
+                  <Link href="/store" className="text-white/80 hover:text-casa-green font-inter">
                     Store
                   </Link>
                 </li>
@@ -220,7 +220,7 @@ export default function Footer() {
             {/* Social Media */}
             <div className="flex gap-4 mt-6">
               <Link
-                href="#"
+                href="https://www.facebook.com/"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
               >
@@ -233,7 +233,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
               >
@@ -246,7 +246,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="#"
+                href="https://www.youtube.com/"
                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-600 transition-colors"
                 style={{ backgroundColor: "#2B2B2B" }}
               >

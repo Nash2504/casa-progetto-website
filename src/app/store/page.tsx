@@ -69,7 +69,7 @@ export default function StorePage() {
         }}
       >
         <div className="absolute inset-0 bg-black/70" />
-        <div className="relative z-10 text-center px-4">
+        <div className="relative z-10 text-center px-4 translate-y-[30px]">
           <h1 className="text-white text-4xl md:text-5xl font-playfair font-bold">
             Store
           </h1>
@@ -116,11 +116,14 @@ export default function StorePage() {
 
         {/* Yellow Accent Bars */}
         {/* Desktop */}
-        <div className="absolute top-[400px] right-0 translate-x-1/2 w-16 h-44 bg-yellow-400 hidden lg:block z-10" />
+        <div
+  className="absolute top-[400px] right-0 lg:block hidden z-10 w-16 h-44"
+  style={{ transform: "translateX(50%)", backgroundColor: "#FBAE32" }}
+/>
         {/* Mobile */}
         <div className="absolute top-0 left-[-20px] right-[-20px] flex justify-between items-start md:hidden px-4 translate-y-[100px]">
-          <div className="w-6 h-24 bg-yellow-400" />
-          <div className="w-6 h-24 bg-yellow-400" />
+          <div className="w-6 h-24" style={{ background: "#FBAE32" }} />
+          <div className="w-6 h-24" style={{ background: "#FBAE32" }} />
         </div>
       </section>
 

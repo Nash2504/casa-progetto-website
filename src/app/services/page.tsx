@@ -8,7 +8,7 @@ export default function ServicesPage() {
   const services = [
     {
       id: 1,
-      image: "/Images/Rectangle 52.png",
+      image: "/Images/Rectangle 14.png",
       title: "Premium Marble & Stone Solutions",
       points: [
         "High-quality marble supply & installation",
@@ -18,7 +18,7 @@ export default function ServicesPage() {
     },
     {
       id: 2,
-      image: "/Images/Rectangle 52.png",
+      image: "/Images/Rectangle 50.png",
       title: "Interior & Architectural Solutions",
       points: [
         "Gypsum & Glass Partitions – enhancing aesthetics",
@@ -28,7 +28,7 @@ export default function ServicesPage() {
     },
     {
       id: 3,
-      image: "/Images/Rectangle 52.png",
+      image: "/Images/Rectangle 51.png",
       title: "Home & Office Renovation",
       points: [
         "Electrical & Plumbing – safe and top-notch",
