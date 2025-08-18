@@ -72,58 +72,55 @@ export default function ServicesPage() {
 
       {/* Our Services Section */}
       <main className="flex-grow bg-gray-100 px-2 py-8 " style={{ background: "#F4F4F4" }}>
-        {/* Container to center and lock layout width so cards don't shift on zoom */}
-        <div className="mx-auto w-full max-w-[1100px] px-10 ">
-          {/* Grid: 1 column on mobile, 2 on md+. Center items.
-              Remove negative margins so card positions are stable.
-              Use fixed column widths and gaps to avoid reflow on zoom. */}
-          <div
-            className="
-              grid
-              grid-cols-1 md:grid-cols-2
-              gap-y-6 md:gap-y-8 md:gap-x-0
-              justify-items-center 
-            "
-            style={{
-              // Prevent layout jitter on zoom by reserving space
-              gridAutoRows: "1fr",
-            }}
-          >
-            {services.map((service, index) => (
-              <div
-                key={service.id}
-                className="bg-white shadow-lg flex flex-col w-full max-w-[520px] md:max-w-[480px]  rounded-xl "
-              >
-                {/* Image (kept fixed) */}
-                <div style={{ height: "205px", width: "100%", position: "relative" }}>
-                <div className="relative w-full h-[205px]   rounded-t-xl  overflow-hidden">
-  <Image
-    src={service.image}
-    alt={service.title}
-    fill
-    style={{ objectFit: "cover" }}
-  />
-</div>
-                </div>
+        <div className="mx-auto w-full max-w-[1100px] px-2 sm:px-4 md:px-10">
+        <div
+  className="
+    grid grid-cols-1 md:grid-cols-2
+    gap-y-6 md:gap-y-10
+    gap-x-4 sm:gap-x-6 md:gap-x-6
+    justify-items-center
+  "
+  style={{ gridAutoRows: "1fr" }}
+>
+  {services.map((service, index) => (
+    <div
+      key={service.id}
+      className="
+        bg-white shadow-lg flex flex-col
+        w-full
+        max-w-[90%] sm:max-w-[380px] md:max-w-[480px]
+        rounded-xl
+      "
+    >
+      {/* Image (top rounded only) */}
+      <div className="relative w-full h-[205px] rounded-t-xl overflow-hidden">
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
 
-                {/* Content (increase height for 4 specific cards) */}
-                <div
-                  className={`p-5 flex flex-col gap-3 ${
-                    expandedIndices.has(index) ? "min-h-[200px]" : ""
-                  }`}
-                >
-                  <h3 className="text-base md:text-lg font-bold text-center md:text-left">
-                    {service.title}
-                  </h3>
-                  <ul className="list-disc pl-5 text-gray-700 text-sm md:text-base">
-                    {service.points.map((point, idx) => (
-                      <li key={idx}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Content */}
+      <div
+        className={`p-5 flex flex-col gap-3 ${
+          expandedIndices.has(index) ? "min-h-[200px]" : ""
+        }`}
+      >
+        <h3 className="text-base md:text-lg font-bold text-center md:text-left">
+          {service.title}
+        </h3>
+        <ul className="list-disc pl-5 text-gray-700 text-sm md:text-base">
+          {service.points.map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
 
