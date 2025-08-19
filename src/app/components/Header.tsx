@@ -7,26 +7,29 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isStoreOpen, setIsStoreOpen] = useState(false); // For store dropdown in mobile
   const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   // Close menu if clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(target)
+      ) {
         setIsMenuOpen(false);
         setIsStoreOpen(false);
       }
     }
 
-    if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isMenuOpen]);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 px-8 py-4 z-50" style={{ backgroundColor: '#1A2B22' }}>
@@ -78,8 +81,9 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
+          ref={buttonRef}
           className="md:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen(prev => !prev)}
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
