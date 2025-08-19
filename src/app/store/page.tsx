@@ -153,12 +153,18 @@ export default function StorePage() {
           </div>
 
           <div className="mt-12 md:hidden">
-            <button
-              onClick={() => setShowAllProductsMobile(!showAllProductsMobile)}
-              className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
-            >
-              {showAllProductsMobile ? "Hide Products" : "View All Products"}
-            </button>
+          <button
+  onClick={() => {
+    if (showAllProductsMobile) {
+      // Scroll to the top of the Products section
+      document.getElementById("product")?.scrollIntoView({ behavior: "smooth" });
+    }
+    setShowAllProductsMobile(!showAllProductsMobile);
+  }}
+  className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
+>
+  {showAllProductsMobile ? "Hide Products" : "View All Products"}
+</button>
           </div>
         </div>
       </main>
@@ -198,12 +204,18 @@ export default function StorePage() {
           </div>
 
           <div className="mt-12 text-center md:hidden">
-            <button
-              onClick={() => setShowAllProjectsMobile(!showAllProjectsMobile)}
-              className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
-            >
-              {showAllProjectsMobile ? "Hide Projects" : "View All Projects"}
-            </button>
+          <button
+  onClick={() => {
+    if (showAllProjectsMobile) {
+      // Scroll to the top of the Projects section
+      document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
+    }
+    setShowAllProjectsMobile(!showAllProjectsMobile);
+  }}
+  className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
+>
+  {showAllProjectsMobile ? "Hide Projects" : "View All Projects"}
+</button>
           </div>
         </div>
       </section>

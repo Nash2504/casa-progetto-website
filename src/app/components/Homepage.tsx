@@ -635,12 +635,19 @@ const Homepage = () => {
     </div>
 
     <div className="flex justify-center mt-10">
-      <button
-        className="bg-black text-white px-5 py-3 w-40 hover:bg-gray-700 transition-colors text-sm sm:text-base"
-        onClick={() => setShowAllFAQs(!showAllFAQs)}
-      >
-        {showAllFAQs ? "Show Less" : "View all FAQ's"}
-      </button>
+    <button
+  className="bg-black text-white px-5 py-3 w-40 hover:bg-gray-700 transition-colors text-sm sm:text-base"
+  onClick={() => {
+    if (showAllFAQs) {
+      // Scroll to the top of the FAQ section
+      document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+    }
+    setShowAllFAQs(!showAllFAQs);
+  }}
+>
+  {showAllFAQs ? "Show Less" : "View all FAQ's"}
+</button>
+
     </div>
   </div>
 </section>
