@@ -63,12 +63,12 @@ export default function Footer() {
               {/* Mobile Form */}
               <div className="w-full max-w-md lg:hidden mb-12">
                 <div className="rounded-lg p-8 w-full" style={{ backgroundColor: "#2B2B2B" }}>
-                  <h2 className="pb-4 text-4xl font-bold text-white mb-6 text-center">
+                  <h2 className="pb-4 text-4xl font-bold text-white mb-6 text-center font-playfair">
                     Get a Quote
                   </h2>
-                  <p className="text-white/80 mb-8 leading-relaxed font-inter text-center">
-                    Our experts are here to help! Share your requirements,<br />
-                    and we&apos;ll provide a personalized estimate tailored to<br />
+                  <p className="text-white/80 mb-10 leading-relaxed font-inter text-center text-[12px]">
+                    Our experts are here to help! Share your requirements,<br></br>
+                    and we&apos;ll provide a personalized estimate tailored to<br></br>
                     your needs and budget.
                   </p>
                   <form className="flex flex-col space-y-4" autoComplete="on" onSubmit={handleSubmit}>
@@ -157,12 +157,12 @@ export default function Footer() {
             {/* Desktop Form */}
             <div className="hidden lg:flex flex-1 w-full justify-end">
               <div className="rounded-lg p-8 w-full max-w-md" style={{ backgroundColor: "#2B2B2B" }}>
-                <h2 className="pb-4 text-4xl font-bold text-white mb-6 text-left">
+                <h1 className="pb-4 text-5xl font-bold text-white mb-6 text-center font-playfair">
                   Get a Quote
-                </h2>
-                <p className="text-white/80 mb-8 leading-relaxed font-inter text-left">
-                  Our experts are here to help! Share your requirements,<br />
-                  and we&apos;ll provide a personalized estimate tailored to<br />
+                </h1>
+                <p className="text-white/80 mb-10 leading-relaxed font-inter text-center text-[14px]">
+                  Our experts are here to help! Share your requirements,<br></br>
+                  and we&apos;ll provide a personalized estimate tailored to<br></br>
                   your needs and budget.
                 </p>
                 <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
