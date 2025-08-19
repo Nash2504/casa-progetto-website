@@ -122,19 +122,35 @@ export default function Footer() {
 
                 <h3 className="text-casa-green text-lg font-playfair">Location</h3>
                 <p className="text-white/80 text-sm font-inter leading-tight">
-                  3rd floor, Hamsah A building, 3A street, near<br />
-                  Ansar gallery, Al Karama, Dubai
-                </p>
+  <Link  
+    href="https://share.google/Pv5lv4Gs1My99p8no" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:underline"
+  >
+    3rd floor, Hamsah A building, 3A street, near<br />
+    Ansar gallery, Al Karama, Dubai
+  </Link> 
+</p>
 
                 <h3 className="text-casa-green text-lg font-playfair">Phone</h3>
                 <p className="text-white/80 text-sm font-inter leading-tight">
-                  +971 54 342 2444 | +971 58 292 4877
-                </p>
+  <Link href="tel:+971543422444" className="hover:underline"> 
+    +971 54 342 2444
+  </Link>{" "} 
+  |{" "}
+  <Link href="tel:+971582924877" className="hover:underline"> 
+    +971 58 292 4877
+  </Link> 
+</p>
 
                 <h3 className="text-casa-green text-lg font-playfair">Mail</h3>
-                <p className="text-white/80 text-sm font-inter leading-tight">
-                  kanchan.casaprogetto@outlook.com
-                </p>
+                <Link
+  href="mailto:kanchan.casaprogetto@outlook.com"
+  className="text-white/80 text-sm font-inter leading-tight hover:underline"
+>
+  kanchan.casaprogetto@outlook.com
+</Link>
               </div>
             </div>
 
